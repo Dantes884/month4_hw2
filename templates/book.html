@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+</head>
+<body>
+
+<div>
+    <button><a href="http://127.0.0.1:8000/admin/">В панель управление</a></button>
+    <ul>
+        {% for i in book %}
+
+        <li>
+            <h1>Название книги: {{i.title}}</h1>
+            <p>Жанр: {{i.genre}}</p>
+            <p>Автор: {{i.author}}</p>
+            <p>Возрастное ограничение: {{i.age_limit}}+ </p>
+            <button><a href="/book/{{i.id}}">Подробнее</a></button>
+        </li>
+
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
