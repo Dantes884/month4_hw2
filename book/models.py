@@ -23,6 +23,8 @@ class Book(models.Model):
     price = models.PositiveIntegerField('Цена')
     mass = models.PositiveIntegerField('Масса книги в граммах')
     age_limit = models.PositiveIntegerField('Возрастное ограничение')
+    created_dates = models.DateTimeField(auto_now_add=True, null=True)
+    updated_dates = models.DateTimeField(auto_now=True, null=True)
 
 
     def __str__(self):
