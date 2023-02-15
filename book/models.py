@@ -14,7 +14,7 @@ class Book(models.Model):
 
 
     title = models.CharField('Название книги', max_length=100)
-    author = models.TextField('Автор книги')
+    author = models.CharField('Автор книги', max_length=100)
     description = models.TextField('Описание книги')
     image = models.ImageField('Картинка', upload_to='')
     quantity = models.PositiveIntegerField('Количество страниц')
